@@ -8,17 +8,26 @@ namespace ReturnTypeFunctions
 {
     internal class Program
     {
-        static string name = "Vivek";
+        //static string name = "Vivek";
         static void Main(string[] args)
         {
-            Console.Title = "Vivek";
+            Console.Title = returnName(); // or use string name
             PrintIntro();
         }
 
+        static string returnName()
+        {
+            return "Vivek";
+        }
+
+        static int returnAge()
+        {
+            return 21;
+        }
 
         static void PrintIntro()
         {
-            Console.WriteLine("Vivek");
+            Console.WriteLine($"{returnName()} - {returnAge()}");  // or use string name
         }
     }
 }
